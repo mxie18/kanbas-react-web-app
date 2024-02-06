@@ -5,3 +5,7 @@
 .card {
     margin: 0 10 35 10;
 }
+.card-overflow {
+    overflow-y: auto;
+    max-height: 700px;
+}
