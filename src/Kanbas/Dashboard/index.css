@@ -1,0 +1,14 @@
+.card img {
+    object-fit: contain;
+    padding: 10px;
+}
+.card {
+    margin: 0px 10px 35px 10px;
+}
+.card-overflow {
+    overflow-y: auto;
+    max-height: 75vh;
+}
+.card-overflow a {
+    text-decoration: none;
+}

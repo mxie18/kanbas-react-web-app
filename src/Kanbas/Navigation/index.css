@@ -1,0 +1,51 @@
+.wd-kanbas-navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 80px;
+    height: 100vh;
+    overflow-y: auto;
+}
+.wd-kanbas-navigation li {
+    font-size: 0.8em;
+}
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+.wd-kanbas-navigation li.wd-active a {
+    color: red;
+}
+.wd-kanbas-navigation li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.wd-kanbas-navigation svg {
+    color: red;
+}
+#account-icon {
+    color: white;
+}
+.wd-active #account-icon {
+    color: red;
+}
+/* .wd-kanbas-navigation a i {
+    display: block;
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+} */
+
+/* body > a > .fa-times {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+} */

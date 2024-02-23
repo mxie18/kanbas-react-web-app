@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.list-group {
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.buttons > button {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2px;
+}

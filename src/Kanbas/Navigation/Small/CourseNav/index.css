@@ -1,0 +1,18 @@
+.small-course-nav {
+    list-style: none;
+}
+
+.small-course-nav li {
+    margin: 10px;
+    height: 30px;
+}
+
+.small-course-nav svg {
+    color: red;
+    margin-right: 10px;
+}
+
+.small-course-nav li a {
+    text-decoration: none;
+    color: red;
+}

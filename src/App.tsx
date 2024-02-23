@@ -3,6 +3,8 @@ import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
 import { HashRouter } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router";
+import SmallScreenKanbasNavigation from "./Kanbas/Navigation/Small/KanbasNav";
+
 function App() {
     return (
         <HashRouter>
@@ -12,6 +14,10 @@ function App() {
                     <Route path="/Labs/*" element={<Labs />} />
                     <Route path="/Kanbas/*" element={<Kanbas />} />
                     <Route path="/hello" element={<HelloWorld />} />
+                    <Route
+                        path="/Kanbas/Courses/:courseId/:screen/KanbasNavigation"
+                        element={<SmallScreenKanbasNavigation />}
+                    />
                 </Routes>
             </div>
         </HashRouter>

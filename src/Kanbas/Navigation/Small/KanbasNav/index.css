@@ -1,0 +1,19 @@
+.wide-nav {
+    margin-top: 40px;
+    list-style: none;
+}
+
+.wide-nav svg {
+    color: red;
+    margin-right: 10px;
+}
+
+.wide-nav li a {
+    text-decoration: none;
+    color: red;
+}
+
+.wide-nav li {
+    margin: 10px;
+    height: 40px;
+}

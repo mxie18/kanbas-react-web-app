@@ -1,0 +1,38 @@
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.assign-btn-bar {
+    display: flex;
+}
+
+.assign-btn-bar button {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.text-entry {
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-right: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.assignments-container .list-group-item .list-group li {
+    border-left: 5px solid green;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test div {
+    display: flex;
+    align-items: center;
+}

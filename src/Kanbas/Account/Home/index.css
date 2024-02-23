@@ -1,0 +1,12 @@
+.account-screen {
+    display: flex;
+}
+
+.main-profile {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.main-profile-content {
+    display: flex;
+}
