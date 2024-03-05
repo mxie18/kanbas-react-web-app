@@ -20,3 +20,20 @@
     border: 1px solid black;
     margin: 2px;
 }
+.wd-modules {
+    overflow-y: auto;
+    max-height: 55vh;
+}
+.module-buttons {
+    display: flex;
+    justify-content: right;
+}
+.module-options .form-control {
+    margin-bottom: 10px;
+}
+.module-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

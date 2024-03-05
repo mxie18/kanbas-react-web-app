@@ -7,8 +7,22 @@
 }
 .card-overflow {
     overflow-y: auto;
-    max-height: 75vh;
+    max-height: 80vh;
 }
 .card-overflow a {
     text-decoration: none;
+}
+.dashboard-content {
+    justify-content: space-between;
+}
+.modify-courses {
+    flex: 0 0 250px;
+    margin-left: 20px;
+}
+.modify-courses input {
+    margin-bottom: 10px;
+}
+.modify-buttons {
+    display: flex;
+    justify-content: right;
 }

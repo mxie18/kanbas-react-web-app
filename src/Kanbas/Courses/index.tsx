@@ -18,10 +18,22 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import SmallScreenCourseNavigation from "../Navigation/Small/CourseNav";
 
-function Courses() {
+function Courses({
+    courseList,
+}: {
+    courseList: {
+        _id: string;
+        name: string;
+        number: string;
+        startDate: string;
+        endDate: string;
+        image: string;
+        section: string;
+    }[];
+}) {
     const { pathname } = useLocation();
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const course = courseList.find((course) => course._id === courseId);
     let arr = decodeURI(pathname).split("/");
     let [pressed, setPressed] = useState(false);
     let [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 576);
@@ -33,7 +45,8 @@ function Courses() {
         }
     };
 
-    console.log("pressed:" + pressed, "issmallscreen:" + isSmallScreen);
+    console.log("courselist: ", courseList);
+
     return (
         <>
             <div className="popup-head d-flex d-sm-none">
