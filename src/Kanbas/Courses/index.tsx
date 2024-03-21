@@ -1,4 +1,5 @@
-import { courses } from "../../Kanbas/Database";
+// import { courses } from "../../Kanbas/Database";
+import axios from "axios";
 import {
     Navigate,
     Route,
@@ -14,26 +15,27 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import { FaChevronDown } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import SmallScreenCourseNavigation from "../Navigation/Small/CourseNav";
 
-function Courses({
-    courseList,
-}: {
-    courseList: {
-        _id: string;
-        name: string;
-        number: string;
-        startDate: string;
-        endDate: string;
-        image: string;
-        section: string;
-    }[];
-}) {
+const API_BASE = process.env.REACT_APP_API_BASE;
+
+function Courses() {
     const { pathname } = useLocation();
     const { courseId } = useParams();
-    const course = courseList.find((course) => course._id === courseId);
+    const COURSES_API = `${API_BASE}/api/courses`;
+    const [course, setCourse] = useState<any>({ _id: "" });
+    const findCourseById = async (courseId?: string) => {
+        const response = await axios.get(`${COURSES_API}/${courseId}`);
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
+    // const course = courseList.find((course) => course._id === courseId);
     let arr = decodeURI(pathname).split("/");
     let [pressed, setPressed] = useState(false);
     let [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 576);
@@ -44,8 +46,6 @@ function Courses({
             setPressed(false);
         }
     };
-
-    console.log("courselist: ", courseList);
 
     return (
         <>
